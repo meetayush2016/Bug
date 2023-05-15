@@ -15,13 +15,13 @@ function Product({ id, title, price, description, category, image }) {
     const [hasPrime] = useState(Math.random() < 0.5);
 
     return (
-        <div className="flex flex-col w-80 mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="relative pb-3/4">
-                <Image src={image} layout="fill" objectFit="cover" />
+        <div className="flex flex-col items-center justify-center w-80  bg-white rounded-lg shadow-lg ">
+            <div className="sticky pb-3/4">
+                <img src={image} id={id} height="150" min-width="150" objectFit="cover" />
             </div>
             <div className="p-4 flex flex-col flex-grow">
                 <p className="text-gray-500 uppercase text-xs mb-1">{category}</p>
-                <h2 className="text-lg font-medium mb-1">{title}</h2>
+                <h2 className="text-lg min-h-200 font-medium mb-1">{title}</h2>
                 <div className="flex items-center mb-1">
                     {Array(rating)
                         .fill()
